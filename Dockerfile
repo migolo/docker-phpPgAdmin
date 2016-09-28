@@ -14,9 +14,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install bz2 \
     && docker-php-ext-install zip \
     && docker-php-ext-install gd \
-    && docker-php-ext-install mysqli \
     && docker-php-ext-install mbstring \
-    && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install pgsql \
     && docker-php-ext-install pdo_pgsql
 
