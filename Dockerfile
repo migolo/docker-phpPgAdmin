@@ -24,9 +24,5 @@ RUN a2enmod rewrite
 RUN a2enmod headers
 RUN a2enmod expires
 
-RUN pecl install -o -f redis \
-    &&  rm -rf /tmp/pear \
-    &&  echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini 
-
 RUN usermod -u 1000 www-data
 RUN cd /var/www/ && git clone git://github.com/phppgadmin/phppgadmin.git ./html
